@@ -130,15 +130,15 @@ function Do_OneFileMake()
     endif
     if &filetype=="c"
         if g:iswindows==1
-            set makeprg=gcc\ -o\ %<.exe\ %
+            set makeprg=gcc\ -o\ bin/%<.exe\ %
         else
-            set makeprg=gcc\ -o\ %<\ %
+            set makeprg=gcc\ -o\ bin/%<\ %
         endif
     elseif &filetype=="cpp"
         if g:iswindows==1
-            set makeprg=g++\ -o\ %<.exe\ %
+            set makeprg=g++\ -o\ bin/%<.exe\ %
         else
-            set makeprg=g++\ -o\ %<\ %
+            set makeprg=g++\ -o\ bin/%<\ %
         endif
         "elseif &filetype=="cs"
         "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %

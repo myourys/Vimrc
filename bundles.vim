@@ -32,9 +32,12 @@ Bundle 'Lokaltog/vim-easymotion'
 "--------------
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'The-NERD-Commenter'
 Bundle 'sjl/gundo.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
+"添加作者信息插件
+Bundle 'AuthorInfo'
 
 "--------------
 " IDE features
@@ -101,6 +104,5 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'fisadev/fisa-vim-colorscheme'
 
-Bundle 'AuthorInfo'
 
 filetype plugin indent on     " required!
