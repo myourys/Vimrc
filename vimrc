@@ -1,13 +1,3 @@
-" 导入Window 既有的默认配置
-source $VIM/mvimrc/vim/mswin.vim
-
-" Win鼠标风格
-behave mswin
-" 不要使用vi的键盘模式，而是vim自己的
-set nocompatible
-" 去掉输入错误的提示声音
-set noeb
-
 " 定义变量 
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
@@ -15,6 +5,21 @@ else
     let g:iswindows=0
 endif
 
+if g:iswindows==1
+    " 导入Window 既有的默认配置
+    source $VIM/mvimrc/vim/mswin.vim
+
+    " Win鼠标风格
+    behave mswin
+endif
+
+" 不要使用vi的键盘模式，而是vim自己的
+set nocompatible
+" 去掉输入错误的提示声音
+set noeb
+
+"导入vundle设置
+source ~/Documents/Vimrc/vundle/test/vimrc
 "--------------------   快捷键  -------------------
 
 
@@ -180,6 +185,22 @@ endfunction
 
 
 "-------------- 快捷键 ------------------
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" eggcache vim
+nnoremap ; :
+:command W w
+:command WQ wq
+:command Wq wq
+:command Q q
+:command Qa qa
+:command QA qa
+
 " 多标签切换
 map <F3> <Esc>:tabprevious<CR>
 map! <F3> <Esc>:tabprevious<CR>
