@@ -1,4 +1,7 @@
-" 定义变量 
+"导入vundle设置
+source ~/.vim/bundles.vim
+
+"定义变量   
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
 else
@@ -18,8 +21,7 @@ set nocompatible
 " 去掉输入错误的提示声音
 set noeb
 
-"导入vundle设置
-source ~/Documents/Vimrc/vundle/test/vimrc
+
 "--------------------   快捷键  -------------------
 
 
@@ -202,15 +204,15 @@ nnoremap ; :
 :command QA qa
 
 " 多标签切换
-map <F3> <Esc>:tabprevious<CR>
+nmap <F3> <Esc>:tabprevious<CR>
 map! <F3> <Esc>:tabprevious<CR>
-map <F4> <Esc>:tabNext<CR>
+nmap <F4> <Esc>:tabNext<CR>
 map! <F4> <Esc>:tabNext<CR>
 "运行Python
 "map <F5> <Esc>:!python manage.py runserver
 
-map <F10>  <Esc>:NERDTreeToggle<CR>
-map <F11>  <Esc>:Tlist<CR>
+nmap <F10>  <Esc>:NERDTreeToggle<CR>
+nmap <F11>  <Esc>:Tlist<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
