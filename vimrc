@@ -144,10 +144,10 @@ function Do_OneFileMake()
         "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
     endif
     if(g:iswindows==1)
-        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
+        let outfilename="bin/".substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
         let toexename=outfilename
     else
-        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
+        let outfilename="bin/".substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
         let toexename=outfilename
     endif
     if filereadable(outfilename)
