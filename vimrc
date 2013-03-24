@@ -194,6 +194,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" w!! to sudo & write a file
+cmap w!! w !sudo tee >/dev/null %
+
+
 " eggcache vim
 nnoremap ; :
 :command W w
