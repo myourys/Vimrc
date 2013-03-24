@@ -1,5 +1,7 @@
 ##Hector's Vimrc
 
+    利用vundle管理插件,插件安装在~/.vim/bundle目录,插件安装修改vundles.vim文件   
+    编译生成文件放在目录bin中,如果使用git,注意修改.gitigore文件
 
 ### Installation
 
@@ -22,3 +24,9 @@
         :BundleInstall
 
 Thst's it!
+
+FAQ:
+1.Plugin "AuthorInfo":
+
+    利用vundles安装后无法使用,进入~/.vim/bundle/AuthorInfo目录将ftplugin改为plugin:
+    mv ftplugin plugin
