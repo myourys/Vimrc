@@ -1,7 +1,7 @@
 "导入vundle设置
 source ~/.vim/bundles.vim
 
-"定义变量   
+"定义变量
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
 else
@@ -22,8 +22,6 @@ set nocompatible
 set noeb
 
 
-"--------------------   快捷键  -------------------
-
 
 
 "----------------------  编码  --------------------
@@ -34,7 +32,7 @@ set fileencodings=ucs-bom,utf-8,chinese,cp936
 
  source $VIMRUNTIME/delmenu.vim
  source $VIMRUNTIME/menu.vim
- 
+
  "vim提示信息乱码的解决
 language messages zh_CN.utf-8
 
@@ -46,6 +44,16 @@ filetype indent on               " 针对不同的文件类型采用不同的缩
 filetype plugin on               " 针对不同的文件类型加载对应的插件
 filetype plugin indent on        " 启用自动补全
 colorscheme darkblue             " 配色方案
+
+" NeoComplCache 自动补全
+let g:neocomplcache_enable_at_startup=1
+let g:neoComplcache_disableautocomplete=1
+"let g:neocomplcache_enable_underbar_completion = 1
+"let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+set completeopt-=preview
 
 
 " 自动缩进
