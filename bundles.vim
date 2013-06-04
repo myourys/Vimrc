@@ -38,6 +38,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
 "添加作者信息插件
 Bundle 'AuthorInfo'
+"自动补全插件会报错
+"Bundle 'Valloric/YouCompleteMe'
 
 "--------------
 " IDE features

@@ -48,8 +48,8 @@ colorscheme darkblue             " 配色方案
 " NeoComplCache 自动补全
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
+    "let g:neocomplcache_enable_underbar_completion = 1
+    "let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
@@ -283,6 +283,7 @@ highlight LineNr  guibg=brown    " 行号背景色
 set ignorecase
 
 
+"添加作者信息插件
 let g:vimrc_author='Hector'
 let g:vimrc_email='myourys@gmail.com'
 let g:vimrc_homepage='http://www.yiwuye.com'
