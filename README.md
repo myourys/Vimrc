@@ -29,3 +29,8 @@ Thst's it!
 
     利用vundles安装后无法使用,进入~/.vim/bundle/AuthorInfo目录将ftplugin改为plugin:
     mv ftplugin plugin
+
+2.mac下安装ctags
+    mac自带的是ctags，而taglist要求的是exuberant crags
+    port install ctags,然后在.vimrc里面添加ctags的路径
+    let Tlist_Ctags_Cmd='/opt/local/bin/ctags'

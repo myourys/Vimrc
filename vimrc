@@ -8,6 +8,13 @@ else
     let g:iswindows=0
 endif
 
+if has("unix")
+	let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        let g:ismacox=1
+    endif
+endif
+
 if g:iswindows==1
     " 导入Window 既有的默认配置
     source $VIM/mvimrc/vim/mswin.vim
@@ -145,6 +152,8 @@ function Do_OneFileMake()
     elseif &filetype=="cpp"
         if g:iswindows==1
             set makeprg=g++\ -o\ bin/%<.exe\ %
+        elseif g:ismacox==1
+            set makeprg=clang++\ -std=c++11\ -stdlib=libc++\ -Weverything\ -o\ bin/%<\ %
         else
             set makeprg=g++\ -o\ bin/%<\ %
         endif
@@ -224,11 +233,14 @@ map! <F4> <Esc>:tabNext<CR>
 "map <F5> <Esc>:!python manage.py runserver
 
 nmap <F10>  <Esc>:NERDTreeToggle<CR>
-nmap <F11>  <Esc>:Tlist<CR>
+nmap <F9>  <Esc>:Tlist<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " taglist
+if g:ismacox==1
+    let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+endif
 let Tlist_Auto_Highlight_Tag = 1
 let Tlist_Auto_Open = 0         "自动打开
 let Tlist_Auto_Update = 1
