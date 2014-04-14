@@ -233,7 +233,7 @@ map! <F4> <Esc>:tabNext<CR>
 "map <F5> <Esc>:!python manage.py runserver
 
 nmap <F10>  <Esc>:NERDTreeToggle<CR>
-nmap <F9>  <Esc>:Tlist<CR>
+nmap <F9>  <Esc>:TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
