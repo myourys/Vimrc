@@ -153,7 +153,7 @@ function Do_OneFileMake()
         if g:iswindows==1
             set makeprg=g++\ -o\ bin/%<.exe\ %
         elseif g:ismacox==1
-            set makeprg=clang++\ -std=c++11\ -stdlib=libc++\ -Weverything\ -o\ bin/%<\ %
+            set makeprg=clang++\ -std=c++11\ -stdlib=libc++\ -o\ bin/%<\ %
         else
             set makeprg=g++\ -o\ bin/%<\ %
         endif
