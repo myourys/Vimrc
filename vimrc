@@ -129,20 +129,24 @@ endif
 map <F5> :call Do_OneFileMake()<CR>
 function Do_OneFileMake()
     w!
+
     if expand("%:p:h")!=getcwd()
         echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press <F7> to redirect to the dir of this file." | echohl None
         return
     endif
+
     let sourcefileename=expand("%:t")
-    if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c"))
+    if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c" && &filetype!="lua"))
         echohl WarningMsg | echo "Fail to make! Please select the right file!" | echohl None
         return
     endif
+
     let deletedspacefilename=substitute(sourcefileename,' ','','g')
     if strlen(deletedspacefilename)!=strlen(sourcefileename)
         echohl WarningMsg | echo "Fail to make! Please delete the spaces in the filename!" | echohl None
         return
     endif
+
     if &filetype=="c"
         if g:iswindows==1
             set makeprg=gcc\ -o\ bin/%<.exe\ %
@@ -159,7 +163,11 @@ function Do_OneFileMake()
         endif
         "elseif &filetype=="cs"
         "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
+    elseif &filetype=="lua"
+        execute "!lua ".sourcefileename
+        return
     endif
+
     if(g:iswindows==1)
         let outfilename="bin/".substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
         let toexename=outfilename
@@ -167,6 +175,7 @@ function Do_OneFileMake()
         let outfilename="bin/".substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
         let toexename=outfilename
     endif
+
     if filereadable(outfilename)
         if(g:iswindows==1)
             let outdeletedsuccess=delete(getcwd()."\\".outfilename)
@@ -179,6 +188,7 @@ function Do_OneFileMake()
             return
         endif
     endif
+
     execute "silent make"
     set makeprg=make
     execute "normal :"
@@ -191,6 +201,7 @@ function Do_OneFileMake()
     endif
     execute "copen"
 endfunction
+
 "进行make的设置
 map <F6> :call Do_make()<CR>
 map <c-F6> :silent make clean<CR>
@@ -302,5 +313,7 @@ let g:vimrc_homepage='http://www.yiwuye.com'
 
 "syntastic cpp支持c++11
 "let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+if g:ismacox==1
+    let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+endif
 
