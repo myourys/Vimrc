@@ -300,3 +300,7 @@ let g:vimrc_author='Hector'
 let g:vimrc_email='myourys@gmail.com'
 let g:vimrc_homepage='http://www.yiwuye.com'
 
+"syntastic cpp支持c++11
+"let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+

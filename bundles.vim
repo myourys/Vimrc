@@ -53,7 +53,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'taglist.vim'
+"taglist用tagbar代替
+"Bundle 'taglist.vim'
 
 "-------------
 " Other Utils
