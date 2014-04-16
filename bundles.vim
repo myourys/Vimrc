@@ -12,11 +12,13 @@ Bundle 'gmarik/vundle'
 " Code Completions
 "------------------
 Bundle 'Shougo/neocomplcache'
-Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
-Bundle 'honza/vim-snippets'
-Bundle 'mattn/zencoding-vim'
+"Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
+" snipmate
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 "------ snipmate dependencies -------
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -24,8 +26,8 @@ Bundle 'tomtom/tlib_vim'
 "-----------------
 " Fast navigation
 "-----------------
-"Bundle 'tsaleh/vim-matchit'
-" " 输入,,e 能够快速转跳
+Bundle 'edsono/vim-matchit'
+" 输入,,e 能够快速转跳
 Bundle 'Lokaltog/vim-easymotion'
 
 "--------------

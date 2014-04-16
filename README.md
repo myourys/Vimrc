@@ -1,4 +1,6 @@
 ##Hector's Vimrc
+    基于项目https://github.com/humiaozuzu/dot-vimrc
+    
     利用vundle管理插件,插件安装在~/.vim/bundle目录,插件安装修改vundles.vim文件   
     编译生成文件放在目录bin中,如果使用git,注意修改.gitigore文件
 
