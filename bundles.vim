@@ -25,7 +25,8 @@ Bundle 'tomtom/tlib_vim'
 " Fast navigation
 "-----------------
 "Bundle 'tsaleh/vim-matchit'
-Bundle 'Lokaltog/vim-easymotion' " 输入,,e 能够快速转跳
+" " 输入,,e 能够快速转跳
+Bundle 'Lokaltog/vim-easymotion'
 
 "--------------
 " Fast editing
@@ -48,7 +49,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'  "ctrl+p 输入文件名，可以搜索工程目录下文件
+"ctrl+p 输入文件名，可以搜索工程目录下文件
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
