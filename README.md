@@ -35,3 +35,8 @@ Thst's it!
     mac自带的是ctags，而taglist要求的是exuberant crags
     port install ctags,然后在.vimrc里面添加ctags的路径
     let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+
+3.ack
+
+    ack是一个搜索工具，必须手动安装，用来代替grep的，在mac下可以安装Ack
+    brew install ack
