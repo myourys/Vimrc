@@ -4,6 +4,8 @@
     利用vundle管理插件,插件安装在~/.vim/bundle目录,插件安装修改vundles.vim文件   
     编译生成文件放在目录bin中,如果使用git,注意修改.gitigore文件
 
+    xvimrc是XCode的XVim插件配置
+
 ### Installation
 
 1. Backup your old vim configuration files:
@@ -23,6 +25,11 @@
 4. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins)and run:
 
         :BundleInstall
+
+5. Setup XCode XVim configuration files:
+
+    mv ~/.xvimrc ~/.xvimrc.orig
+    ln -s ~/.vim/xvimrc ~/.xvimrc
 
 Thst's it!
 
