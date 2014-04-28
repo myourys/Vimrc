@@ -32,3 +32,10 @@ map ,bi :xccmd jumpToNextIssue<cr>
 
 " tab navigation
 map ,<tab> :xccmd selectNextTab<cr>
+
+
+" Page up and down 翻页
+nmap cf <c-f>
+nmap cb <c-b>
+nmap cu <c-u>
+nmap cd <c-d>
