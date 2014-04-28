@@ -235,6 +235,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Page up and down 翻页
+nmap cf <c-f>
+nmap cb <c-b>
+nmap cu <c-u>
+nmap cd <c-d>
+
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null %
 
