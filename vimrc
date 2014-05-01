@@ -230,6 +230,18 @@ endfunction
 "-------------- 快捷键 ------------------
 
 " easier navigation between split windows
+
+" 公用系统剪贴板 vim --version | grep clipboard 查看是否
+" +clipboard 才能支持
+set clipboard=unnamed
+
+" 共用命令
+noremap gp "+gp
+noremap gP "+gP
+noremap gy "+y
+noremap gx "+x
+
+" 多窗口切换
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
