@@ -1,6 +1,3 @@
-"导入vundle设置
-source ~/.vim/bundles.vim
-
 "定义变量
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
@@ -8,6 +5,7 @@ else
     let g:iswindows=0
 endif
 
+let g:ismacox=0
 if has("unix")
 	let s:uname = system("uname")
     if s:uname == "Darwin\n"
@@ -17,10 +15,14 @@ endif
 
 if g:iswindows==1
     " 导入Window 既有的默认配置
-    source $VIM/mvimrc/vim/mswin.vim
+    source $VIM/_vimrc
 
+    source $HOME/.vim/bundles.vim
     " Win鼠标风格
-    behave mswin
+    "behave mswin
+else
+"导入vundle设置
+    source ~/.vim/bundles.vim
 endif
 
 " 不要使用vi的键盘模式，而是vim自己的
