@@ -4,7 +4,9 @@
 
     xvimrc是XCode的XVim插件配置
 
-### Installation
+### Installation->Linux/Unix
+
+    use MacVim
 
 1. Backup your old vim configuration files:
 
@@ -30,6 +32,23 @@
     ln -s ~/.vim/xvimrc ~/.xvimrc
 
 Thst's it!
+
+###Installation->Windows
+
+    use gvim
+1.Clone
+
+        cd $HOME
+        git clone git://github.com/myourys/Vimrc.git .vim
+        git submodule update --init
+2.install curl
+    
+    cygwin->install curl
+
+3.source vimrc
+
+    at $HOME ,edit _virmc >>source $home/.vim/vimrc
+
 
 ###FAQ:
 1.Plugin "AuthorInfo":
