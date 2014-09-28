@@ -33,9 +33,12 @@ Bundle 'Lokaltog/vim-easymotion'
 "--------------
 " Fast editing
 "--------------
+"添加括号 ds cs ysw
 Bundle 'tpope/vim-surround'
+"<leader>cc cn cm cs commiter
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'The-NERD-Commenter'
+" GundoToggle display undo history
 Bundle 'sjl/gundo.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'

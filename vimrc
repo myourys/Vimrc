@@ -311,7 +311,7 @@ let tlist_php_settings = 'php;c:class;i:interfaces;d:constant;f:function'
 
 "NERDTree
 let NERDTreeChDirMode=2 "当前目录和NERDTree目录保持一致
-let NERDTreeQuitOnOpen=1 "打开文件时关闭树
+"let NERDTreeQuitOnOpen=1 "打开文件时关闭树
 let NERDTreeShowBookmarks=1 "显示书签
 let NERDTreeMinimalUI=1 "不显示帮助面板
 let NERDTreeDirArrows=0 "目录箭头 1 显示箭头 0传统+-|号
