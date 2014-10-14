@@ -22,6 +22,10 @@ Bundle 'honza/vim-snippets'
 "------ snipmate dependencies -------
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+" C++ STL support
+Bundle 'Mizuchi/STL-Syntax'
+" C++ header file switch
+Bundle 'vim-scripts/a.vim'
 
 "-----------------
 " Fast navigation

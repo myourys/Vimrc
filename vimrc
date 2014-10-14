@@ -235,7 +235,7 @@ endfunction
 
 " 公用系统剪贴板 vim --version | grep clipboard 查看是否
 " +clipboard 才能支持
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " 共用命令
 noremap gp "+gp
@@ -376,3 +376,9 @@ if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
+
+" a.vim
+" *.cpp 和 *.h 间切换
+nmap <Leader>a :A<CR>
+" 子窗口中显示 *.cpp 或 *.h
+nmap <Leader>s :AS<CR>
