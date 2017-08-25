@@ -151,7 +151,7 @@ function Do_OneFileMake()
     endif
 
     let sourcefileename=expand("%:t")
-    if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c" && &filetype!="lua"))
+    if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c" && &filetype!="lua" && &filetype!="erlang"))
         echohl WarningMsg | echo "Fail to make! Please select the right file!" | echohl None
         return
     endif
@@ -180,6 +180,9 @@ function Do_OneFileMake()
         "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
     elseif &filetype=="lua"
         execute "!lua ".sourcefileename
+        return
+    elseif &filetype=="erlang"
+        execute "!erlc ".sourcefileename
         return
     endif
 
@@ -354,7 +357,7 @@ endif
 "ctrlp在新标签页打开
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_tabpage_position = 'ac'
-set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store,*.ebin,*.xlsm  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " tabbar
