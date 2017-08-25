@@ -357,7 +357,7 @@ endif
 "ctrlp在新标签页打开
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_tabpage_position = 'ac'
-set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store,*.ebin,*.xlsm  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store,*.ebin,*.xlsm,*.beam  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " tabbar
