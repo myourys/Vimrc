@@ -1,4 +1,4 @@
-"定义变量
+
 if(has("win32") || has("win95") || has("win64") || has("win16"))
     let g:iswindows=1
 else
@@ -121,6 +121,7 @@ if has("gui_running")
    " set guioptions-=r " 隐藏右侧滚动条
    " set guioptions-=b " 隐藏底部滚动条
    " set showtabline=0 " 隐藏Tab栏
+   set guifont=Monaco:h14
 endif
 
 
@@ -353,6 +354,9 @@ if g:ismacox==1
     let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 endif
 
+" ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " ctrlp
 "ctrlp在新标签页打开
 let g:ctrlp_open_new_file = 't'
@@ -385,3 +389,4 @@ let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 nmap <Leader>a :A<CR>
 " 子窗口中显示 *.cpp 或 *.h
 nmap <Leader>s :AS<CR>
+"定义变量
